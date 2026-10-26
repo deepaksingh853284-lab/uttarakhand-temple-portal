@@ -1,0 +1,7 @@
+{% extends "base.html" %}
+{% block title %}Contact | Dev Bhoomi{% endblock %}
+{% block content %}
+<section class="page-hero"><div class="container"><span class="eyebrow light">GET IN TOUCH</span><h1>We'd love to hear from you.</h1><p>Share feedback or suggest a temple to add to this student project.</p></div></section>
+<section class="section container contact-layout"><div class="contact-copy"><span class="eyebrow">CONTACT THE PROJECT TEAM</span><h2>Help us make the portal better.</h2><p>This is an educational demonstration website. The form shows a local confirmation and does not send an email or store messages.</p><div class="contact-note"><span>ॐ</span><div><strong>Explore respectfully</strong><p>Please verify religious, travel and accessibility details with official local sources.</p></div></div></div>
+<form class="contact-form" method="post"><label>Your name<input name="name" required maxlength="100" placeholder="Enter your name"></label><label>Email address<input name="email" type="email" required maxlength="150" placeholder="you@example.com"></label><label>Message<textarea name="message" rows="5" required maxlength="2000" placeholder="Your message or temple suggestion..."></textarea></label><button class="btn btn-primary" type="submit">Send message <span>→</span></button></form></section>
+{% endblock %}
