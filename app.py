@@ -140,7 +140,7 @@ def index():
     districts = db.execute("SELECT COUNT(DISTINCT district) FROM temples").fetchone()[0]
     return render_template("index.html", featured=featured, total=total, districts=districts)
 
-@app.route("/temples")
+
 def temples():
     db = get_db()
     q = request.args.get("q", "").strip()
@@ -165,11 +165,9 @@ def temple_detail(temple_id):
     if temple is None:
         abort(404)
     return render_template("temple_detail.html", temple=temple)
-
 @app.route("/char-dham")
 def char_dham():
     return render_template("char_dham.html")
-
 @app.route("/contact", methods=["GET", "POST"])
 def contact():
     if request.method == "POST":
