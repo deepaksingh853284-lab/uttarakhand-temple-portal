@@ -141,6 +141,7 @@ def index():
     return render_template("index.html", featured=featured, total=total, districts=districts)
 
 
+@app.route("/temples")
 def temples():
     db = get_db()
     q = request.args.get("q", "").strip()
